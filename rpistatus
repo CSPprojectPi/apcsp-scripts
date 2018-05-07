@@ -1,2 +1,13 @@
-hello world from AP CSP
+#!/bin/bash
 
+rbpies=( rpi01 rpi02 rpi03 rpi04 rpi05 rpi06 rpi07 rpi08 rpi09 rpi10 rpi11 rpi12 rpi13 rpi14 rpi15 rpi16 rpi17 rpi18 )
+arraylength=${#rbpies[@]}
+
+for ((i=0; i<$arraylength;i++)) do
+ ping -ac 4 ${rbpies[${i}]} > /dev/null;
+ if [ $? == 0 ]; then
+  echo "${rbpies[${i}]}:alive";
+ else
+  echo "${rbpies[${i}]}:dead";
+ fi
+done
