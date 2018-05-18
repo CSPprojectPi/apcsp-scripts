@@ -4,7 +4,7 @@ rbpies=( rpi01 rpi02 rpi03 rpi04 rpi05 rpi06 rpi07 rpi08 rpi09 rpi10 rpi11 rpi12
 arraylength=${#rbpies[@]}
 
 for ((i=0; i<$arraylength;i++)) do
- ping -ac 4 ${rbpies[${i}]} > /dev/null;
+ ping -ac 1 -W 1 ${rbpies[${i}]} > /dev/null;
  if [ $? == 0 ]; then
   echo "${rbpies[${i}]}:alive";
  else
