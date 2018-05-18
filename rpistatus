@@ -11,3 +11,5 @@ for ((i=0; i<$arraylength;i++)) do
   echo "${rbpies[${i}]}:dead";
  fi
 done
+
+echo done
