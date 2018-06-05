@@ -1,0 +1,7 @@
+#!/bin/bash
+firstname=$1
+lastname=$2
+location=$(whereis myfirstbashscript)
+
+echo "hello $firstname $lastname"
+echo "this file is located under $location"
